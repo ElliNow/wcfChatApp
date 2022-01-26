@@ -5,9 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="129,158,0,0" VerticalAlignment="Top" Width="75"/>
+        Title="MainWindow" Height="478.311" Width="668.874" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid Margin="0,0,2,0" Height="437" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnConDiscon" Content="Connect" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="129" Height="32" Click="Button_Click"/>
+        <TextBox x:Name="tbUserName" HorizontalAlignment="Left" Height="32" Margin="175,10,0,0" TextWrapping="Wrap" Text="Имя юзера" VerticalAlignment="Top" Width="474"/>
+        <TextBox x:Name="tbMessage" Height="108" Margin="15,319,5,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="639" KeyDown="tbMessage_KeyDown"/>
+        <TextBlock HorizontalAlignment="Left" Height="0" Margin="175,279,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="40"/>
+        <ListBox x:Name="LbChat" Height="267" Margin="15,47,5,0" VerticalAlignment="Top" Width="639"/>
 
     </Grid>
 </Window>
