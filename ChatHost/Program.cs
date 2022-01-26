@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ServiceModel;
 
 namespace ChatHost
 {
@@ -10,6 +11,12 @@ namespace ChatHost
     {
         static void Main(string[] args)
         {
+            using(var host = new ServiceHost(typeof(wcfChat.ServiceChat)))
+            {
+                host.Open();
+                Console.WriteLine("Хост стартовал!");
+                Console.ReadLine();
+            }
         }
     }
 }
